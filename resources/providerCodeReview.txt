@@ -1,0 +1,51 @@
+The providers assigned to us for Assignment 8 were:
+** Timothy (tgiancola) Giancola (giancola.t@husky.neu.edu)
+** Nithila Raman (raman.n@husky.neu.edu)
+
+We were provided with, the all 4 View classes - TextualAnimationView, VisualAnimationView, VisualEditView
+and SVGAnimator view.
+They also provided us with the ViewPanel class which is used to display the shapes, and the AnimationEdit
+class which handles the edit Keyframes/Shapes feature of the edit view.
+
+We have to say, their implementation of the edit view was very convenient to work with since, it used
+more or less the same concept we used to display our Visual and Editor Views.
+
+While our design worked with a hashMap of AbstractShape objects, their design worked with a List of Shapes.
+What we found, was that a hasMap was a lot more easier to work with since each AbstractShape object would
+have a unique key, and hence some particular object could be easily accessible. In a List, objects are usually
+retrieved by their position in the list and this case, the position has no relevance to the actual attributes
+of the object, and hence it made it a bit difficult to retrieve a certain object.
+
+The other parts were very similar. Their views were displayed by rendering a panel of shapes with modified
+(tweened) positions, dimensions and colors for each tick. For our model, we also were rendering a panel of shapes
+for each tick with their tweened attributes. Their method getInstanceView in class VisualAnimationView and our method
+tweenAllMotion in class SimpleShapeAnimation essentially takes in a list of Motions and checks if the given tick falls
+in between a motion's start time and end time and only changes the attributes of that motion. Then it only adds that one
+motion in the Shape(list object) or AbstractShape(hashMap object) its going to return for that tick.
+
+Their view implementation, on other notes was very well documented and easily understandable. I was able to track
+flow of functions, and line of inputs quite easily. Each function had a good description, and any confusion
+was solved by Nithila. To make sure their view works, without changing any letter in their given code, there were
+a few classes I had to implement in my model. Fortunately, we were able to use our own implementation of a KeyFrame and
+a Motion to work with their Edit View. Since they did not use the inbuilt java.awt.Color class, we had to create our
+own Color class.
+
+Since we've mentioned quite a few times, our concepts were quite similar and hence, we did not need them to make any
+changes with their code. We have used the exact code of the class VisualEditView and class VisualAnimationView
+that they sent us. To make those views work with our model, we just had to add on to our model and our controller.
+
+Their animation display was smooth, but we have a few notes about the user interface. Sometimes if
+you click the top bar with the user instructions by mistake, it goes into text mode and then, none of the controls
+work by using the keyboard. I would suggest using buttons. Also, for their speed Increase and speed Decrease, they
+have chosen to use '<' and '>' keys. These keys need the user to press "Shitt + <" or "Shift + >". We would recommend
+using the arrow keys for the same and some might not realise to press shift and then think, this feature is not working.
+
+They did not provide a README file which explains which features work and which do not, but in an email Nithila mentioned
+that all functions work except for remove shape. However, we have fixed that feature in this version. We did not need
+to make any changes in their View classes to make this feature work. She also mentioned, that the trick with adding
+a shape is you have to add more than one key frame before it actually appears on the screen. The provider's version of
+the edit view does not have the 'start' feature, and hence we have not implemented it in our version.
+
+
+
+

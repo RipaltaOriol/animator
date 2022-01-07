@@ -1,0 +1,22 @@
+Assignment 8 was a very interesting and fun assignment. It gave me a lot of insight into how my own design works,
+and about the different ways in which one can design this animation software. It was, to be honest, and great
+and very convenient experience for us, since our code and our provider's code worked on the same concept.
+
+Looking at our provider's code, we learnt that we could have used enum as a data type for storing multiple things,
+such as shape type or the type of edit. This would have been a lot more flexible and less complicated than using
+String fields.
+
+We also learnt from their code, that we have a direct reference to an instance of our model in our EditView.
+This gives the view the ability to directly mutate the model, which should be the job of the controller. We
+made changes accordingly and now, our EditView does not have a direct reference to our model.
+
+The providers assigned to us for Assignment 8 were:
+** Timothy (tgiancola) Giancola (giancola.t@husky.neu.edu)
+** Nithila Raman (raman.n@husky.neu.edu)
+
+They were very willing and prompt while responding to our doubts and questions. Nithila very well
+answered all of our questions, providing us with sufficient information to understand their code,
+while also adhering to the assignment rules.
+
+We were very fortunate to be given their code, since their design was kind of similar to ours, and hence
+adapting their view to our model was not a hard task.
